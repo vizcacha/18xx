@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+if RUBY_ENGINE != 'opal'
+  require 'json'
+end
+
 module Engine
   module Config
     module Game
