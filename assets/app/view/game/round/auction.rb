@@ -87,7 +87,7 @@ module View
 
         def render_companies
           return [] if @hidden && !@step.visible?
-          return [] unless @current_actions.include?('bid')
+          return [] unless @current_actions.include?('bid') or @current_actions.include?('select a minor')
 
           @selected_company = @step.auctioning_company if @step.auctioning_company
 

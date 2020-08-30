@@ -40,5 +40,9 @@ module Engine
     def minor?
       true
     end
+
+    def desc
+      ''
+    end
   end
 end

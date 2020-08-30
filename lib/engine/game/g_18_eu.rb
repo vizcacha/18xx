@@ -8,6 +8,8 @@ module Engine
     class G18EU < Base
       load_from_json(Config::Game::G18EU::JSON)
 
+      DEV_STAGE = :alpha
+
       GAME_LOCATION = 'Europe'
       GAME_RULES_URL = 'http://www.deepthoughtgames.com/games/18EU/Rules.pdf'
       GAME_DESIGNER = 'David Hecht'
@@ -23,6 +25,12 @@ module Engine
         end
       end
 
+      def stock_round
+        Round::Stock.new(self, [
+          Step::BuySellParShares
+        ])
+      end
+
       def operating_round(round_num)
         Round::Operating.new(self, [
           Step::BuyCompany,
@@ -34,6 +42,12 @@ module Engine
           Step::IssueShares,
           [Step::BuyCompany, blocks: true],
         ], round_num: round_num)
+      end
+
+      def init_round
+        Round::Auction.new(self, [
+          Step::G18EU::MinorAuction
+        ])
       end
     end
   end

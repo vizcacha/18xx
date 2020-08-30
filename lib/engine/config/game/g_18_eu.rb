@@ -318,7 +318,9 @@ module Engine
         0
       ],
       "color": "#231f20"
-    },
+    }
+  ],
+  "minors": [
     {
       "sym": "1",
       "name": "Chemin de Fer du Nord",
@@ -784,6 +786,7 @@ module Engine
     {
       "name": "2",
       "train_limit": 4,
+      "operating_rounds": 2,
       "tiles": [
         "yellow"
       ]
@@ -791,6 +794,7 @@ module Engine
     {
       "name": "3",
       "train_limit": 4,
+      "operating_rounds": 2,
       "tiles": [
         "yellow",
         "green"
@@ -799,6 +803,7 @@ module Engine
     {
       "name": "4",
       "train_limit": 3,
+      "operating_rounds": 2,
       "tiles": [
         "yellow",
         "green"
@@ -807,6 +812,7 @@ module Engine
     {
       "name": "5",
       "train_limit": 2,
+      "operating_rounds": 2,
       "tiles": [
         "yellow",
         "green",
@@ -816,6 +822,7 @@ module Engine
     {
       "name": "6",
       "train_limit": 2,
+      "operating_rounds": 2,
       "tiles": [
         "yellow",
         "green",
@@ -825,6 +832,7 @@ module Engine
     {
       "name": "8",
       "train_limit": 2,
+      "operating_rounds": 2,
       "tiles": [
         "yellow",
         "green",
